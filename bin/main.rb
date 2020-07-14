@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
-
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
@@ -72,5 +70,3 @@ end
 
 play = TicTacToe.new
 play.player_turn
-# display = Board.new
-# display.player_turn
