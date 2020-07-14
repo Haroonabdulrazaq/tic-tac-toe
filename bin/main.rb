@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
@@ -27,11 +26,11 @@ class TicTacToe
   def player_turn
     draw_board
     9.times do
-      if @count.even?
-        player = @name1
-      else
-        player = @name2
-      end
+      player = if @count.even?
+                 @name1
+               else
+                 @name2
+               end
       puts "#{player} Make a move? Choose between 1-9"
       move = gets.chomp.strip.to_i
       update_board(move)
