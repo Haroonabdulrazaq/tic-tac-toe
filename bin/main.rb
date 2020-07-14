@@ -20,14 +20,15 @@ class TicTacToe
     9.times do 
       if count%2 == 0
         player = @name1
-        puts "#{player} Make a move?Choose from 1-9"
-        move = gets.chomp.strip 
-        @board.draw_board
+        puts "#{player} Make a move? Choose between 1-9"
+        move = gets.chomp.strip.to_i  
+        @board.update_board(move)
+     
       else 
         player = @name2 
-        puts "#{player} Make a move?Choose from 1-9"
-        move = gets.chomp.strip 
-        @board.draw_board
+        puts "#{player} Make a move? Choose between 1-9"
+        move = gets.chomp.strip.to_i  
+        @board.update_board(move)  
       end
       count +=1
     end   
@@ -50,7 +51,6 @@ class Board
   end
   
   def draw_board
-    puts '------------------'
     puts "|  #{@position[0]}  |  #{@position[1]}  |  #{@position[2]} |"
     puts '------------------'
     puts "|  #{@position[3]}  |  #{@position[4]}  |  #{@position[5]} |"
@@ -60,7 +60,19 @@ class Board
   end
 
   def update_board(move)
-    move = @position[i]
+    i=0
+      if 1 <= move || 9 >= move 
+        if i%2 == 0
+          @position[move-1] = "X"
+          i+=1
+        elsif i%2 == 1 
+          @position[move-1] = "O"
+          i+=1
+        end
+      else
+        puts "Invalid move"
+      end
+      draw_board
   end
 end
 
