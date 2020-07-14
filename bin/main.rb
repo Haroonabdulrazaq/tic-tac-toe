@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
+
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
-    @board = Board.new
+    @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    @count = 0
     puts 'Enter First Player name: '
     @name1 = gets.chomp
     puts 'Enter Second Player name: '
@@ -11,38 +13,6 @@ class TicTacToe
     @player2 = 'O'
     puts "#{@name1} is #{@player1}"
     puts "#{@name2} is #{@player2}"
-  end
-
-  def player_turn
-    $count = 0
-    @board.draw_board
-    9.times do
-      player = if $count.even?
-                 @name1
-               else
-                 @name2
-               end
-
-      puts "#{player} Make a move? Choose between 1-9"
-      move = gets.chomp.strip.to_i
-      @board.update_board(move)
-      $count += 1
-    end
-  end
-
-  def winner
-    puts "#{@name}, Congratulations, you have won!"
-  end
-
-  def draw
-    puts 'It is a tie'
-  end
-end
-
-# Display the Board
-class Board
-  def initialize
-    @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 
   def draw_board
@@ -54,11 +24,26 @@ class Board
     puts '------------------'
   end
 
+  def player_turn
+    draw_board
+    9.times do
+      if @count.even?
+        player = @name1
+      else
+        player = @name2
+      end
+      puts "#{player} Make a move? Choose between 1-9"
+      move = gets.chomp.strip.to_i
+      update_board(move)
+      @count += 1
+    end
+  end
+
   def update_board(move)
     if move >= 1 || move <= 9
-      if $count.even?
+      if @count.even?
         @position[move - 1] = 'X'
-      elsif $count.odd?
+      elsif @count.odd?
         @position[move - 1] = 'O'
       end
     else
@@ -66,7 +51,27 @@ class Board
     end
     draw_board
   end
+
+  def winner
+    puts "#{@name}, Congratulations, you have won!"
+  end
+
+  def draw
+    puts 'It is a tie'
+  end
+
+  def game_over
+    # if draw or winner
+    # puts "Game Over"
+  end
+
+  def play_again
+    # until game_over
+    # puts Prompt player to play again
+  end
 end
+
+# Display the Board
 
 play = TicTacToe.new
 play.player_turn
