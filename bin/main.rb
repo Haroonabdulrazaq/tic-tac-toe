@@ -16,9 +16,9 @@ class TicTacToe
 
 
   def player_turn
-    count = 0
+    $count = 0
     9.times do 
-      if count%2 == 0
+      if $count%2 == 0
         player = @name1
         puts "#{player} Make a move? Choose between 1-9"
         move = gets.chomp.strip.to_i  
@@ -30,7 +30,7 @@ class TicTacToe
         move = gets.chomp.strip.to_i  
         @board.update_board(move)  
       end
-      count +=1
+      $count +=1
     end   
   end
 
@@ -60,14 +60,11 @@ class Board
   end
 
   def update_board(move)
-    i=0
       if 1 <= move || 9 >= move 
-        if i%2 == 0
+        if $count%2 == 0
           @position[move-1] = "X"
-          i+=1
-        elsif i%2 == 1 
+        elsif $count%2 == 1
           @position[move-1] = "O"
-          i+=1
         end
       else
         puts "Invalid move"
