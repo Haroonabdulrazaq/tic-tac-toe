@@ -1,7 +1,6 @@
-#!/usr/bin/env ruby
-# rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
-# rubocop:disable Metrics/MethodLength
+# !/usr/bin/env ruby
 # Implement TicTacToe Game Interface
+
 class TicTacToe
   def initialize
     @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -28,6 +27,9 @@ class TicTacToe
     puts "|  #{@position[0]}  |  #{@position[1]}  |  #{@position[2]} |"
     puts '------------------'
   end
+
+  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/MethodLength
 
   def player_turn
     draw_board
@@ -86,6 +88,8 @@ class TicTacToe
     end
   end
 
+  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+  # rubocop:enable Metrics/MethodLength
   def play_again
     puts 'Do you want to play again? y or n'
     response = gets.chomp.strip.downcase
@@ -112,8 +116,6 @@ class TicTacToe
   end
 end
 
-# rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
-# rubocop:enable Metrics/MethodLength
 # Display the Board
 
 play = TicTacToe.new
