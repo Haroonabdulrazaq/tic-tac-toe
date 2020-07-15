@@ -42,13 +42,14 @@ class TicTacToe
       move = gets.chomp.strip.to_i
       update_board(move)
       @count += 1
+      break if win?(player)
       break if draw?
     end
   end
 
   def update_board(move)
     if move >= 1 && move <= 9
-      if @position[move - 1] != @player1 && @position[move - 1] != @player2 #If not already taken
+      if @position[move - 1] != @player1 && @position[move - 1] != @player2 # If not already taken
         if @count.even?
           @position[move - 1] = @player1
         elsif @count.odd?
@@ -65,47 +66,57 @@ class TicTacToe
     draw_board
   end
 
-  # def already_taken
-    
-  # end 
-
-
-  def winner
-    puts "#{@name}, Congratulations, you have won!"
+  def win?(player)
+    if @count.odd?
+      player = @player1
+      name = @name1
+    else
+      player = @player2
+      name = @name2
+    end
+    if player == @position[0] && player == @position[1] && player == @position[2] ||
+       player == @position[0] && player == @position[4] && player == @position[8] ||
+       player == @position[0] && player == @position[3] && player == @position[6] ||
+       player == @position[1] && player == @position[4] && player == @position[7] ||
+       player == @position[2] && player == @position[4] && player == @position[6] ||
+       player == @position[2] && player == @position[5] && player == @position[8] ||
+       player == @position[6] && player == @position[7] && player == @position[8] ||
+       player == @position[3] && player == @position[4] && player == @position[5]
+      puts "Congratulations #{name}, you won!!!"
+      true
+    end
   end
 
   def play_again
-     puts "Do you want to play again? y or n"
-     response = gets.chomp.strip.downcase
-     if response == "y" 
-      player_turn 
-    else 
+    puts 'Do you want to play again? y or n'
+    response = gets.chomp.strip.downcase
+    if response == 'y'
+      player_turn
+    else
       game_over
-    end
-    end
-  end
-
-  def draw?
-    if @count == 9
-      i=0
-      @position.each do i  
-          if i == @player1 || i == @player2  # If all position is exhausted
-            @check_draw = false
-          end
-        end
-        @check_draw =true
-        puts "Its a tie!!!"
-        play_again
-        @check_draw
+   end
     end
   end
 
-  def game_over
-   puts "Game Over!!!"
-   exit
+def draw?
+  if @count == 9
+    i = 0
+    @position.each do
+      i
+      @check_draw = false if i == @player1 || i == @player2 # If all position is exhausted
+    end
+    @check_draw = true
+    puts 'Its a tie!!!'
+    play_again
+    @check_draw
   end
+end
 
- 
+def game_over
+  puts 'Game Over!!!'
+  exit
+end
+
 #  end
 
 # Display the Board
