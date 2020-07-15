@@ -29,7 +29,7 @@ class TicTacToe
   end
 
   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
-  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
 
   def player_turn
     draw_board
@@ -89,7 +89,7 @@ class TicTacToe
   end
 
   # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
-
+  # rubocop:enable Metrics/MethodLength
   def play_again
     puts 'Do you want to play again? y or n'
     response = gets.chomp.strip.downcase
