@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 # rubocop:disable Metrics/MethodLength
-# Implementing TicTacToe Game Interface
+# Implement TicTacToe Game Interface
 class TicTacToe
   def initialize
     @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
