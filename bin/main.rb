@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
@@ -39,17 +41,28 @@ class TicTacToe
   end
 
   def update_board(move)
-    if move >= 1 || move <= 9
-      if @count.even?
-        @position[move - 1] = 'X'
-      elsif @count.odd?
-        @position[move - 1] = 'O'
+    if move >= 1 && move <= 9
+      if @position[move - 1] != @player1 && @position[move - 1] != @player2
+        if @count.even?
+          @position[move - 1] = @player1
+        elsif @count.odd?
+          @position[move - 1] = @player2
+        end
+      else
+        puts 'Already taken, Make another move'
+        @count -= 1
       end
     else
       puts 'Invalid move'
+      @count -= 1
     end
     draw_board
   end
+
+  def already_taken
+    
+  end 
+
 
   def winner
     puts "#{@name}, Congratulations, you have won!"
@@ -59,7 +72,7 @@ class TicTacToe
     puts 'It is a tie'
   end
 
-  def game_over
+  def game_over?
     # if draw or winner
     # puts "Game Over"
   end
