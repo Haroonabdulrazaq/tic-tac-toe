@@ -18,6 +18,10 @@ class TicTacToe
   end
 
   def draw_board
+    if @count == 9
+      @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      @count = 0
+    end
     puts "|  #{@position[6]}  |  #{@position[7]}  |  #{@position[8]} |"
     puts '------------------'
     puts "|  #{@position[3]}  |  #{@position[4]}  |  #{@position[5]} |"
@@ -71,10 +75,13 @@ class TicTacToe
   end
 
   def play_again
-    If draw?
-     Puts "Do you want to play again? y or n"
-     response = gets.chomps.strip.downcase
-     response == "y"? "play_turn" : "exit"
+     puts "Do you want to play again? y or n"
+     response = gets.chomp.strip.downcase
+     if response == "y" 
+      player_turn 
+    else 
+      exit
+    end
     end
   end
 
@@ -88,9 +95,9 @@ class TicTacToe
         end
         @check_draw =true
         puts "Its a tie!!!"
+        play_again
         @check_draw
     end
-    play_again
   end
 
   def game_over?
