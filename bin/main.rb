@@ -14,7 +14,6 @@ class TicTacToe
     @player2 = 'O'
     puts "#{@name1} is #{@player1}"
     puts "#{@name2} is #{@player2}"
-    @check_draw = false
   end
 
   def draw_board
@@ -94,30 +93,28 @@ class TicTacToe
       player_turn
     else
       game_over
-   end
     end
   end
+  # end
 
-def draw?
-  if @count == 9
-    i = 0
-    @position.each do
-      i
-      @check_draw = false if i == @player1 || i == @player2 # If all position is exhausted
+  def draw?
+    return unless @count == 9
+
+    @position.each do |i|
+      if i == @player1 || i == @player2
+      end # If all position is exhausted
     end
-    @check_draw = true
+    check_draw = true
     puts 'Its a tie!!!'
     play_again
-    @check_draw
+    check_draw
+  end
+
+  def game_over
+    puts 'Game Over!!!'
+    exit
   end
 end
-
-def game_over
-  puts 'Game Over!!!'
-  exit
-end
-
-#  end
 
 # Display the Board
 
