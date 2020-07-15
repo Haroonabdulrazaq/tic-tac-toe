@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
-
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
@@ -95,14 +93,13 @@ class TicTacToe
       game_over
     end
   end
-  # end
 
   def draw?
     return unless @count == 9
 
     @position.each do |i|
-      if i == @player1 || i == @player2
-      end # If all position is exhausted
+      if i == @player1 || i == @player2 # If all position is exhausted
+      end
     end
     check_draw = true
     puts 'Its a tie!!!'
