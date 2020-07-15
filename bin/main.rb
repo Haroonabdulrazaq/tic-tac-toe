@@ -61,13 +61,21 @@ class TicTacToe
     draw_board
   end
 
-  def already_taken
+  # def already_taken
     
-  end 
+  # end 
 
 
   def winner
     puts "#{@name}, Congratulations, you have won!"
+  end
+
+  def play_again
+    If draw?
+     Puts "Do you want to play again? y or n"
+     response = gets.chomps.strip.downcase
+     response == "y"? "play_turn" : "exit"
+    end
   end
 
   def draw?
@@ -82,6 +90,7 @@ class TicTacToe
         puts "Its a tie!!!"
         @check_draw
     end
+    play_again
   end
 
   def game_over?
@@ -89,15 +98,8 @@ class TicTacToe
     # puts "Game Over"
   end
 
-  def play_again
-   #If draw?
-    #Puts "Do you want to play again? y or n"
-    #response = gets.chomps.strip.downcase
-    #response == "y"? play_turn: exit
-   #end
-  end
-  
-end
+ 
+#  end
 
 # Display the Board
 
