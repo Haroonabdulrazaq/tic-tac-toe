@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/MethodLength
 # Implementing TicTacToe Game Interface
 class TicTacToe
   def initialize
@@ -97,10 +99,7 @@ class TicTacToe
   def draw?
     return unless @count == 9
 
-    @position.each do |i|
-      if i == @player1 || i == @player2 # If all position is exhausted
-      end
-    end
+    ((@position.include? @player1) || @player2)
     check_draw = true
     puts 'Its a tie!!!'
     play_again
@@ -113,6 +112,8 @@ class TicTacToe
   end
 end
 
+# rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/MethodLength
 # Display the Board
 
 play = TicTacToe.new
