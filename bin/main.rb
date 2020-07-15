@@ -80,7 +80,7 @@ class TicTacToe
      if response == "y" 
       player_turn 
     else 
-      exit
+      game_over
     end
     end
   end
@@ -89,7 +89,7 @@ class TicTacToe
     if @count == 9
       i=0
       @position.each do i  
-          if i == @player1 || i == @player2  #If all position is exhausted
+          if i == @player1 || i == @player2  # If all position is exhausted
             @check_draw = false
           end
         end
@@ -100,9 +100,9 @@ class TicTacToe
     end
   end
 
-  def game_over?
-    # if draw or winner
-    # puts "Game Over"
+  def game_over
+   puts "Game Over!!!"
+   exit
   end
 
  
