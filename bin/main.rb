@@ -29,7 +29,7 @@ class TicTacToe
   end
 
   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
-  # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
 
   def player_turn
     draw_board
@@ -109,6 +109,8 @@ class TicTacToe
     play_again
     check_draw
   end
+
+  # rubocop:enable Metrics/AbcSize
 
   def game_over
     puts 'Game Over!!!'
