@@ -14,6 +14,7 @@ class TicTacToe
     @player2 = 'O'
     puts "#{@name1} is #{@player1}"
     puts "#{@name2} is #{@player2}"
+    @check_draw = false
   end
 
   def draw_board
@@ -27,7 +28,7 @@ class TicTacToe
 
   def player_turn
     draw_board
-    9.times do
+    loop do
       player = if @count.even?
                  @name1
                else
@@ -37,12 +38,13 @@ class TicTacToe
       move = gets.chomp.strip.to_i
       update_board(move)
       @count += 1
+      break if draw?
     end
   end
 
   def update_board(move)
     if move >= 1 && move <= 9
-      if @position[move - 1] != @player1 && @position[move - 1] != @player2
+      if @position[move - 1] != @player1 && @position[move - 1] != @player2 #If not already taken
         if @count.even?
           @position[move - 1] = @player1
         elsif @count.odd?
@@ -68,8 +70,18 @@ class TicTacToe
     puts "#{@name}, Congratulations, you have won!"
   end
 
-  def draw
-    puts 'It is a tie'
+  def draw?
+    if @count == 9
+      i=0
+      @position.each do i  
+          if i == @player1 || i == @player2  #If all position is exhausted
+            @check_draw = false
+          end
+        end
+        @check_draw =true
+        puts "Its a tie!!!"
+        @check_draw
+    end
   end
 
   def game_over?
@@ -78,9 +90,13 @@ class TicTacToe
   end
 
   def play_again
-    # until game_over
-    # puts Prompt player to play again
+   #If draw?
+    #Puts "Do you want to play again? y or n"
+    #response = gets.chomps.strip.downcase
+    #response == "y"? play_turn: exit
+   #end
   end
+  
 end
 
 # Display the Board
