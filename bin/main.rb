@@ -1,4 +1,4 @@
-# !/usr/bin/env ruby
+#!/usr/bin/env ruby
 # Implement TicTacToe Game Interface
 
 class TicTacToe
