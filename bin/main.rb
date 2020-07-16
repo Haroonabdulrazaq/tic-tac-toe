@@ -3,16 +3,16 @@
 
 class Board
   def initialize
-      puts "Enter First Player name: " 
-      @name1 = gets.chomp
-      puts "Enter Second Player name: " 
-      @name2 = gets.chomp
-      @player1 = "X"
-      @player2 = "O"
-      puts "#{@name1} is #{@player1}"
-      puts "#{@name2} is #{@player2}"
-      @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      @count =0
+    puts 'Enter First Player name: '
+    @name1 = gets.chomp
+    puts 'Enter Second Player name: '
+    @name2 = gets.chomp
+    @player1 = 'X'
+    @player2 = 'O'
+    puts "#{@name1} is #{@player1}"
+    puts "#{@name2} is #{@player2}"
+    @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    @count = 0
   end
 
   def draw_board
@@ -31,21 +31,21 @@ class Board
   def player_turn
     draw_board
     loop do
-      player = if @count.even?
-                 @name1
-               else
-                 @name2
-               end
-      puts "#{player} Make a move? Choose between 1-9"
-      move = gets.chomp.strip.to_i
-      update_board(move)
-      @count += 1
-      break if win?(player)
-      break if draw?
+      # player = if @count.even?
+      #            @name1
+      #          else
+      #            @name2
+      #          end
+      # puts "#{player} Make a move? Choose between 1-9"
+      # move = gets.chomp.strip.to_i
+      # update_board(move)
+      # @count += 1
+      # break if win?(player)
+      # break if draw?
     end
   end
 
-  def update_board(move)
+  def update_board(_move)
     # if move >= 1 && move <= 9
     #   if @position[move - 1] != @player1 && @position[move - 1] != @player2 # If not already taken
     #     if @count.even?
@@ -54,7 +54,7 @@ class Board
     #       @position[move - 1] = @player2
     #     end
     #   else
-        puts 'Already taken, Make another move'
+    puts 'Already taken, Make another move'
     #     @count -= 1
     #   end
     # else
@@ -64,12 +64,12 @@ class Board
     # draw_board
   end
 
-  def win?(player)
-      puts "#{@name}, Congratulations, you have won!"
+  def win?(_player)
+    puts "#{@name}, Congratulations, you have won!"
   end
 
   def draw?
-      puts "It is a tie"
+    puts 'It is a tie'
   end
 
   def play_again
@@ -78,10 +78,10 @@ class Board
     # if response == 'y'
     #   player_turn
     # else
-      puts 'Game Over!!!'
-    #end
+    puts 'Game Over!!!'
+    # end
   end
 end
 
-board =Board.new
+board = Board.new
 board.player_turn
