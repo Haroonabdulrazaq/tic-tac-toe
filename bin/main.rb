@@ -75,14 +75,15 @@ class TicTacToe
       player = @player2
       name = @name2
     end
-    if player == @position[0] && player == @position[1] && player == @position[2] ||
-       player == @position[0] && player == @position[4] && player == @position[8] ||
-       player == @position[0] && player == @position[3] && player == @position[6] ||
-       player == @position[1] && player == @position[4] && player == @position[7] ||
-       player == @position[2] && player == @position[4] && player == @position[6] ||
-       player == @position[2] && player == @position[5] && player == @position[8] ||
-       player == @position[6] && player == @position[7] && player == @position[8] ||
-       player == @position[3] && player == @position[4] && player == @position[5]
+
+    if [@position[0], @position[1], @position[2]].all?(player) ||
+       [@position[0], @position[4], @position[8]].all?(player) ||
+       [@position[0], @position[3], @position[6]].all?(player) ||
+       [@position[1], @position[4], @position[7]].all?(player) ||
+       [@position[2], @position[4], @position[6]].all?(player) ||
+       [@position[2], @position[5], @position[8]].all?(player) ||
+       [@position[6], @position[7], @position[8]].all?(player) ||
+       [@position[3], @position[4], @position[5]].all?(player)
       puts "Congratulations #{name}, you won!!!"
       true
     end
