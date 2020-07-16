@@ -96,7 +96,7 @@ class TicTacToe
     if response == 'y'
       player_turn
     else
-      game_over
+      puts 'Game Over!!!'
     end
   end
 
@@ -111,11 +111,6 @@ class TicTacToe
   end
 
   # rubocop:enable Metrics/AbcSize
-
-  def game_over
-    puts 'Game Over!!!'
-    exit
-  end
 end
 
 # Display the Board
