@@ -49,7 +49,7 @@ class TicTacToe
 
   def update_board(move)
     if move >= 1 && move <= 9
-      if @position[move - 1] != @player1 && @position[move - 1] != @player2 # If not already taken
+      if @position[move - 1] != @player1 && @position[move - 1] != @player2
         if @count.even?
           @position[move - 1] = @player1
         elsif @count.odd?
