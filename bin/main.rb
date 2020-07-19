@@ -3,6 +3,10 @@
 
 class TicTacToe
   def initialize
+welcome_message= <<-STRING
+    Hello and welcome to TicTacToe game
+  STRING
+    puts welcome_message
     @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @count = 0
     puts 'Enter First Player name: '
@@ -83,8 +87,8 @@ class TicTacToe
        [@position[2], @position[5], @position[8]].all?(player) ||
        [@position[6], @position[7], @position[8]].all?(player) ||
        [@position[3], @position[4], @position[5]].all?(player)
-      puts "Congratulations #{name}, you won!!!"
-      true
+       puts "Congratulations #{name}, you won!!!"
+       true
     end
   end
 
