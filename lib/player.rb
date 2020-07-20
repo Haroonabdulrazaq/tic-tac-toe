@@ -1,5 +1,5 @@
 class Player
-attr_acessor :name, :mark
+attr_accessor :name, :mark
 
  def initialize(name, mark)
     @name = name

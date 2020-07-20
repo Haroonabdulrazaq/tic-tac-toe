@@ -1,9 +1,11 @@
-require_relative 'player'
 class Game_logic
+    attr_accessor :player1, :player2 , :player
     def initialize
         @position =[1,2,3,4,5,6,7,8,9]
         @count =0
-        @player
+        @player1
+        @player2 
+        @player 
     end
 
     def board
@@ -26,10 +28,22 @@ class Game_logic
             end  
     end
 
-    # def update_board(move)
+    def update_board
+        
+    end
 
-    # end
+    def win?
+        if  [@position[0], @position[1], @position[2]].all?(player.mark) ||
+            [@position[0], @position[4], @position[8]].all?(player) ||
+            [@position[0], @position[3], @position[6]].all?(player) ||
+            [@position[1], @position[4], @position[7]].all?(player) ||
+            [@position[2], @position[4], @position[6]].all?(player) ||
+            [@position[2], @position[5], @position[8]].all?(player) ||
+            [@position[6], @position[7], @position[8]].all?(player) ||
+            [@position[3], @position[4], @position[5]].all?(player)
+           true
+        else
+           false
+        end
+    end
 end
- 
-game = Game_logic.new
-game.board
