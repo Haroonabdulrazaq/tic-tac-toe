@@ -1,21 +1,21 @@
 class Game_logic
-    attr_accessor :player1, :player2 , :player
+    attr_accessor :player1, :player2 , :player, :move
     def initialize
         @position =[1,2,3,4,5,6,7,8,9]
         @count =0
         @player1
         @player2 
-        @player 
+        @player =''
     end
 
     def board
-         "
-         |  #{@position[6]}  |  #{@position[7]}  |  #{@position[8]} |
-         ------------------
-         |  #{@position[3]}  |  #{@position[4]}  |  #{@position[5]} |
-         ------------------
-         |  #{@position[0]}  |  #{@position[1]}  |  #{@position[2]} |
-         ------------------"
+    "
+    |  #{@position[6]}  |  #{@position[7]}  |  #{@position[8]} |
+    ------------------
+    |  #{@position[3]}  |  #{@position[4]}  |  #{@position[5]} |
+    ------------------
+    |  #{@position[0]}  |  #{@position[1]}  |  #{@position[2]} |
+    ------------------"
     end
 
     def switch_player
@@ -28,8 +28,13 @@ class Game_logic
             end  
     end
 
-    def update_board
-        
+    def update_board(move)
+        board
+        if @count.odd?
+            @position[move -1] = 'X'
+        else
+            @position[move -1] = 'O'
+        end
     end
 
     def win?
