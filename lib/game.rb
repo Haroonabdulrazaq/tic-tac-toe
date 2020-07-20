@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Game Logic for TicTacToe
 class GameLogic
   attr_accessor :player1, :player2, :player
@@ -35,23 +33,20 @@ class GameLogic
     @position[move - 1] = @player.mark
   end
 
+  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def win?
-    if  [@position[0], @position[1], @position[2]].all?(player.mark) ||
-        [@position[0], @position[4], @position[8]].all?(player.mark) ||
-        [@position[0], @position[3], @position[6]].all?(player.mark) ||
-        [@position[1], @position[4], @position[7]].all?(player.mark) ||
-        [@position[2], @position[4], @position[6]].all?(player.mark) ||
-        [@position[2], @position[5], @position[8]].all?(player.mark) ||
-        [@position[6], @position[7], @position[8]].all?(player.mark) ||
-        [@position[3], @position[4], @position[5]].all?(player.mark)
+    if [@position[0], @position[1], @position[2]].all?(player.mark) ||
+       [@position[0], @position[4], @position[8]].all?(player.mark) ||
+       [@position[0], @position[3], @position[6]].all?(player.mark) ||
+       [@position[1], @position[4], @position[7]].all?(player.mark) ||
+       [@position[2], @position[4], @position[6]].all?(player.mark) ||
+       [@position[2], @position[5], @position[8]].all?(player.mark) ||
+       [@position[6], @position[7], @position[8]].all?(player.mark) ||
+       [@position[3], @position[4], @position[5]].all?(player.mark)
       true
     else
       false
     end
   end
-
-  #   def draw?
-  #     @position.each do |i|
-  #     end
-  #   end
+  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 end
