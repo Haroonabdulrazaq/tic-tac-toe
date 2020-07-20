@@ -23,7 +23,7 @@ puts "#{game.player2.name} is #{game.player2.mark}"
 
 puts game.board
 
-loop do |i|
+9.times do |i|
   game.switch_player
   puts "#{game.player.name} make a move?"
   move = gets.chomp.strip.to_i

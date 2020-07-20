@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 # Game Logic for TicTacToe
 class GameLogic
@@ -49,8 +50,8 @@ class GameLogic
     end
   end
 
-  def draw?
-    @position.each do |i|
-    end
-  end
+  #   def draw?
+  #     @position.each do |i|
+  #     end
+  #   end
 end
