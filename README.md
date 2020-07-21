@@ -7,14 +7,13 @@
 ## Content
 
 <a text-align="center" href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#method">Methods</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#ins">Installing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#ins">Installing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#demo">Live Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 
 ## About <a name = "about"></a>
-
+TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players. The final outcome is either a tie or a win. There are 8 possible winning combinations from a player, player can win by making 3 consecutive moves either vertically, horizontally or diagonally. A player has maximum of 5 possible moves. For more detailed information on the game rules [click here ](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170)
 
 ## 🔧 Built with<a name = "with"></a>
 
@@ -22,7 +21,7 @@
 
 ## 🔴 Live Demo <a name = "demo"></a>
 
-[![Run on Repl.it]()
+[![Run on Repl.it](https://repl.it/@Haroon136/tic-tac-toe)
 
 
 ## 🔨 Setup
@@ -48,7 +47,7 @@
 👤 **Rumbidzayi Mudziviri**
 
 - Github: [@Rumbie-Mudzie7](https://github.com/Rumbie-Mudzie7)
-- Twitter: [@RumbidzayMudz3](https://twitter.com/RumbidzayMudz3)
+- Twitter: [@RumbidzayiMudz3](https://twitter.com/RumbidzayiMudz3)
 - Linkedin: [rumbidzayimudziviri](https://www.linkedin.com/in/rumbidzayi-mudziviri-792b4b85/)
 
 
