@@ -22,12 +22,15 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 ## 🔴 Live Demo <a name = "demo"></a>
 
 [![Run on Repl.it](https://repl.it/@Haroon136/tic-tac-toe)
+(https://repl.it/@Haroon136/tic-tac-toe#bin/main.rb)
 
 
 ## 🔨 Setup
 
 - Fork the repo to your remote repository.
 - Clone or download the repository to a local directory on your computer.
+- checkout into develop branch  using <code>git checkout develop</code>
+- run the game using the command  <code>bin/main.rb</code>
 
 ## 🛠 Installing <a name = "ins"></a>
 
