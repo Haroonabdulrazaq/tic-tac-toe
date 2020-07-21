@@ -67,7 +67,7 @@ Feel free to check the fork this repo and create pull request if you want to mak
 
 Give a ⭐️ if you like this project!
 
-## +1 :thumbsup: Acknowledgements
+## :thumbsup: Acknowledgements
 
 [Muhammad Talha Waqar](https://github.com/talhawaqar)<br>
  
