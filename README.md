@@ -13,7 +13,10 @@
 <a href="#author">Author</a>
 
 ## About <a name = "about"></a>
-TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players. The final outcome is either a tie or a win. There are 8 possible winning combinations from a player, player can win by making 3 consecutive moves either vertically, horizontally or diagonally. A player has maximum of 5 possible moves. For more detailed information on the game rules [click here ](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170)
+TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players. The final outcome is either a tie or a win. There are 8 possible winning combinations from a player, player can win by making 3 consecutive moves either vertically, horizontally or diagonally. A player has maximum of 5 possible moves.
+## Rules
+- 
+ For more detailed information on the game rules [click here ](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170)
 
 ## 🔧 Built with<a name = "with"></a>
 
@@ -26,16 +29,10 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 
 ## 🔨 Setup
 
-- Fork the repo to your remote repository.
-- Clone or download the repository to a local directory on your computer.
-- checkout into develop branch  using <code>git checkout develop</code>
-- run the game using the command  <code>bin/main.rb</code>
-
-## 🛠 Installing <a name = "ins"></a>
-
-- run npm install to install the dependencies for the project
-- run bundle init to create a Gemfile
-- run bundle install to install the gems
+- To clone the repo to your local repository. Follow this steps
+- <code> git clone https://github.com/Haroonabdulrazaq/tic-tac-toe.git</code>
+- <code> cd tic-tac-toe<code>
+- <code>bin/main.rb</code>
 
 
 ## ✒️  Authors <a name = "author"></a>
