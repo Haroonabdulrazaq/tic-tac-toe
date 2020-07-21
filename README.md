@@ -7,14 +7,16 @@
 ## Content
 
 <a text-align="center" href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#rules">Rules</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#ins">Installing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#setup">Set-up</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#demo">Live Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 
 ## About <a name = "about"></a>
 TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players. The final outcome is either a tie or a win. There are 8 possible winning combinations from a player, player can win by making 3 consecutive moves either vertically, horizontally or diagonally. A player has maximum of 5 possible moves.
-## Rules
+
+## Rules <a name = "rules"></a>
 - Players have to enter a name
 - The system assignes a symbol(X or O) to player
 - The player can make moves by pressing a number (of choice) on his/her keyboard
@@ -33,7 +35,7 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 [Run on Repl.it](https://repl.it/@Haroon136/tic-tac-toe#bin/main.rb)
 
 
-## 🔨 Setup
+## 🔨 Setup    <a name = "setup"></a>
 
 - To clone the repo to your local repository. Follow this steps
 - <code> git clone https://github.com/Haroonabdulrazaq/tic-tac-toe.git</code>
