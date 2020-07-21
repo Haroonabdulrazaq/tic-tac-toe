@@ -15,7 +15,13 @@
 ## About <a name = "about"></a>
 TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players. The final outcome is either a tie or a win. There are 8 possible winning combinations from a player, player can win by making 3 consecutive moves either vertically, horizontally or diagonally. A player has maximum of 5 possible moves.
 ## Rules
-- 
+- Players have to enter a name
+- The system assignes a symbol(X or O) to player
+- The player can make moves by pressing a number (of choice) on his/her keyboard
+- The position a player is choosing should not have been taking
+- The move made by a user should be a number otherwise its an invalid move
+- A player can win by making three consecutive moves vertically, horizontally or diagonally
+- If all position has been taken and there is no winner then its a tie(draw)
  For more detailed information on the game rules [click here ](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170)
 
 ## 🔧 Built with<a name = "with"></a>
