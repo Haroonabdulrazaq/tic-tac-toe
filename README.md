@@ -37,7 +37,7 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 
 - To clone the repo to your local repository. Follow this steps
 - <code> git clone https://github.com/Haroonabdulrazaq/tic-tac-toe.git</code>
-- <code> cd tic-tac-toe<code>
+- <code> cd tic-tac-toe</code>
 - <code>bin/main.rb</code>
 
 
@@ -67,7 +67,7 @@ Feel free to check the fork this repo and create pull request if you want to mak
 
 Give a ⭐️ if you like this project!
 
-## :clap: Acknowledgements
+## +1 :thumbsup: Acknowledgements
 
 [Muhammad Talha Waqar](https://github.com/talhawaqar)<br>
  
