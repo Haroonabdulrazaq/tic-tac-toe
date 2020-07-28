@@ -1,4 +1,5 @@
 # Game Logic for TicTacToe
+
 class GameLogic
   attr_accessor :player1, :player2, :player, :position
   def initialize
