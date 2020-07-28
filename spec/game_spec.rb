@@ -9,9 +9,9 @@ describe GameLogic do
   game.player2 = Player.new(name, 'O')
   describe '#board' do
     let(:str) do
-      "\n    |  7  |  8  |  9 |\n    -------\
------------\n    |  4  |  5  |  6 |\n    --------\
-----------\n    |  1  |  2  |  3 |\n    ------------------"
+      "\n    |  7  |  8  |  9 |\n    -----------\
+-------\n    |  4  |  5  |  6 |\n    -----------\
+-------\n    |  1  |  2  |  3 |\n    ------------------"
     end
     it 'returns the board string' do
       my_result = game.board
@@ -40,14 +40,14 @@ describe GameLogic do
   describe '#win?' do
     winning_moves = [[0, 1, 2], [0, 4, 8], [0, 3, 6], [1, 4, 7], [2, 4, 0], [2, 5, 8], [6, 7, 8], [3, 4, 5]]
     winning_moves.each do |i|
-      it 'returns true if player occupies any of the winning move' do
+      it "returns true if player occupies #{i.map { |j| j + 1 }}" do
         game.position[i[0]] = game.player.mark
         game.position[i[1]] = game.player.mark
         game.position[i[2]] = game.player.mark
         expect(game.win?).to eql(true)
       end
     end
-    it 'returns false if player occupies all winning move' do
+    it 'returns false if player doesn\'t occupy any winning move' do
       expect(!game.win?).to eql(false)
     end
   end
