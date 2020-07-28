@@ -3,9 +3,8 @@ require './lib/player.rb'
 
 describe GameLogic do
   let(:my_result) {  }
-  let(:move) { 0 }
+  let(:move) { 5 }
   game = GameLogic.new
-  game.position
   game.player1 = Player.new(name, 'X')
   game.player2 = Player.new(name, 'O')
   describe '#board' do
@@ -23,10 +22,14 @@ describe GameLogic do
     end
   end
 
-  describe "#update_board" do
-    it "returns a mark to update the board" do
-      expect(game.player1.mark).to eql('X')
-      expect(game.player2.mark).to eql('O')
+  describe '#update_board' do
+    it 'returns a mark to update the board with O' do
+      expect(game.update_board(5)).to eql(game.player2.mark)
+    end
+
+    it 'returns a mark to update the board with X, when player is swtiched' do
+      game.switch_player
+      expect(game.update_board(4)).to eql(game.player1.mark)
     end
   end
 end
