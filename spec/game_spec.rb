@@ -32,4 +32,17 @@ describe GameLogic do
       expect(game.update_board(4)).to eql(game.player.mark)
     end
   end
+
+  describe '#win?' do
+    it 'returns true if any of the player mark is in the consecutive position' do
+      game.position = ['X', 2, 3, 4, 'X', 6, 7, 8, 'X']
+      my_result = game.win?
+      expect(my_result).to eql(true)
+    end
+    it 'returns false if there is no any 3 marks aligned' do
+      game.position = ['O', 2, 3, 4, 5, 'O', 7, 8, 'O']
+      my_result = game.win?
+      expect(my_result).to eql(false)
+    end
+  end
 end
