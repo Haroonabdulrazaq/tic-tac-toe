@@ -8,7 +8,11 @@ describe GameLogic do
   game.player1 = Player.new(name, 'X')
   game.player2 = Player.new(name, 'O')
   describe '#board' do
-    let(:str) { "\n    |  7  |  8  |  9 |\n    ------------------\n    |  4  |  5  |  6 |\n    ------------------\n    |  1  |  2  |  3 |\n    ------------------" }
+    let(:str) do
+      "\n    |  7  |  8  |  9 |\n    -------\
+-----------\n    |  4  |  5  |  6 |\n    --------\
+----------\n    |  1  |  2  |  3 |\n    ------------------"
+    end
     it 'returns the board string' do
       my_result = game.board
       expect(my_result).to eql(str)
