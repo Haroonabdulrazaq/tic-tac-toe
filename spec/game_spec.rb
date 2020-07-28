@@ -46,17 +46,21 @@ describe GameLogic do
   end
 
   describe '#win?' do
-    winning_moves = [[0, 1, 2], [0, 4, 8], [0, 3, 6], [1, 4, 7], [2, 4, 0], [2, 5, 8], [6, 7, 8], [3, 4, 5]]
+    winning_moves = [[0, 1, 2, 5], [0, 4, 8], [0, 7, 3, 6], [1, 4, 7], [2, 4, 8, 3, 0]]
+    non_winning_moves = [[0, 4, 2, 5], [0, 6, 2, 8], [0, 7, 4, 6], [1, 4, 6]]
     winning_moves.each do |i|
       it "returns true if player occupies #{i.map { |j| j + 1 }}" do
-        game.position[i[0]] = game.player.mark
-        game.position[i[1]] = game.player.mark
-        game.position[i[2]] = game.player.mark
+        game.position = [1, 2, 3, 4, 5, 6, 7, 8, 9] # reset the after each loop test
+        i.each { |k| game.position[k] = game.player.mark }
         expect(game.win?).to eql(true)
       end
     end
-    it 'returns false if player doesn\'t occupy any winning move' do
-      expect(!game.win?).to eql(false)
+    non_winning_moves.each do |i|
+      it "returns false if player occupies #{i.map { |j| j + 1 }}" do
+        game.position = [1, 2, 3, 4, 5, 6, 7, 8, 9] # reset the after each loop test
+        i.each { |k| game.position[k] = game.player.mark }
+        expect(game.win?).to eql(false)
+      end
     end
   end
 end
