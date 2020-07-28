@@ -34,15 +34,17 @@ describe GameLogic do
   end
 
   describe '#win?' do
-    it 'returns true if any of the player mark is in the consecutive position' do
-      game.position = ['X', 2, 3, 4, 'X', 6, 7, 8, 'X']
-      my_result = game.win?
-      expect(my_result).to eql(true)
+    winning_moves = [[0,1,2],[0,4,8],[0,3,6],[1,4,7],[2,4,0],[2,5,8],[6,7,8],[3,4,5]]
+    winning_moves.each do |i| 
+      it "returns true if player occupies any of the winning move" do
+        game.position[i[0]] = game.player.mark
+        game.position[i[1]] = game.player.mark
+        game.position[i[2]] = game.player.mark
+        expect(game.win?).to eql(true)
+      end  
     end
-    it 'returns false if there is no any 3 marks aligned' do
-      game.position = ['O', 2, 3, 4, 5, 'O', 7, 8, 'O']
-      my_result = game.win?
-      expect(my_result).to eql(false)
+    it "returns false if player occupies all winning move" do
+      expect(!game.win?).to eql (false)
     end
   end
 end
