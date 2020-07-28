@@ -5,8 +5,8 @@ describe GameLogic do
   let(:my_result) {}
   let(:move) { 5 }
   game = GameLogic.new
-  game.player1 = Player.new(name, 'X')
-  game.player2 = Player.new(name, 'O')
+  game.player1 = Player.new('player1', 'X')
+  game.player2 = Player.new('player2', 'O')
   describe '#board' do
     let(:str) do
       "\n    |  7  |  8  |  9 |\n    -----------\
@@ -20,9 +20,17 @@ describe GameLogic do
   end
 
   describe '#switch_player' do
-    it 'returns player1 or Player 2' do
-      expect(game.switch_player).to eql(1)
-      expect(game.switch_player).to eql(0)
+    it 'assigns @player variable player1 object' do
+      game.switch_player
+      expect(game.player.name).to eql('player1')
+    end
+    it 'changes @player variable player2 object' do
+      game.switch_player
+      expect(game.player.name).to eql('player2')
+    end
+    it 'changes back @player variable player1 object' do
+      game.switch_player
+      expect(game.player.name).to eql('player1')
     end
   end
 
