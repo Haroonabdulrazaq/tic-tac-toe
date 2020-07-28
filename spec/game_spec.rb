@@ -35,13 +35,13 @@ describe GameLogic do
   end
 
   describe '#update_board' do
-    it 'returns a mark to update the board with O' do
-      expect(game.update_board(5)).to eql(game.player.mark)
+    it '@position[4] value changes to X' do
+      game.update_board(5)
+      expect(game.position[4]).to eql('X')
     end
-
-    it 'returns a mark to update the board with X, when player is swtiched' do
-      game.switch_player
-      expect(game.update_board(4)).to eql(game.player.mark)
+    it '@position[3] value changes to X' do
+      game.update_board(4)
+      expect(game.position[3]).to eql('X')
     end
   end
 
