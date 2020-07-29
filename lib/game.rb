@@ -1,6 +1,7 @@
 # Game Logic for TicTacToe
+
 class GameLogic
-  attr_accessor :player1, :player2, :player
+  attr_accessor :player1, :player2, :player, :position
   def initialize
     @position = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @count = 0

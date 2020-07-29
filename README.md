@@ -43,7 +43,7 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 - <code>bin/main.rb</code>
 
 
-## ✒️  Authors <a name = "author"></a>
+## ✒️ Authors <a name = "author"></a>
 
 👤 **Haroon Abdulrazaq**
 
@@ -56,6 +56,11 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 - Github: [@Rumbie-Mudzie7](https://github.com/Rumbie-Mudzie7)
 - Twitter: [@RumbidzayiMudz3](https://twitter.com/RumbidzayiMudz3)
 - Linkedin: [rumbidzayimudziviri](https://www.linkedin.com/in/rumbidzayi-mudziviri-792b4b85/)
+
+👤 **Hubert MUGABO**
+- Github: [@mugberto](https://github.com/mugberto)
+- Twitter: [@mugberto](https://twitter.com/mugberto)
+- Linkedin: [mugberto](https://www.linkedin.com/in/hubert-mugabo-23144b6a/)
 
 
 ## 🤝 Contributing

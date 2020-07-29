@@ -28,10 +28,10 @@ puts game.board
   move = gets.chomp.strip.to_i
   game.update_board(move)
   puts game.board
-  win = game.win?
-  if win
-    puts "Congratulations #{game.player.name}, you won!!"
+
+  if game.win?
+    puts "Congratulations #{game.player.name}, you won!!!"
     break
   end
-  puts "It's a tie" if i == 8 && !win
+  puts "It's a tie" if i == 8 && !game.win?
 end
