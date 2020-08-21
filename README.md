@@ -55,7 +55,7 @@ TicTacToe is a 3x3 grid dual player game that assignes symbols(Xs,Os) to players
 
 - Github: [@Rumbie-Mudzie7](https://github.com/Rumbie-Mudzie7)
 - Twitter: [@RumbidzayiMudz3](https://twitter.com/RumbidzayiMudz3)
-- Linkedin: [rumbidzayimudziviri](https://www.linkedin.com/in/rumbidzayi-mudziviri-792b4b85/)
+- Linkedin: [rumbidzayimudziviri](https://www.linkedin.com/in/rumbidzayi-mudziviri)
 
 
 ## 🤝 Contributing
